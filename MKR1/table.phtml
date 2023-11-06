@@ -1,0 +1,27 @@
+<?php
+/** @var array $competitions */
+$goods;
+?>
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Country</th>
+        <th>Price (&euro;)</th>
+    </tr>
+    
+        <?php foreach ($goods as $good):  ?>
+            <tr>
+                <td><?= $good['id']; ?></td>
+                <td><?= $good['name']; ?></td>
+                <td><?= $good['country']; ?></td>
+                <td><?= $good['price']; ?></td>
+            </tr>
+        <?php endforeach; ?>
+</table>
+<br>
+<form action="index.php" method="GET">
+    <input type="submit" name="order-alph" value="A-Z"></input>
+    <input type="submit" name="order-dis-alph" value="Z-A"></input>
+</form>
