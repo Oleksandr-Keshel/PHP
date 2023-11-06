@@ -1,0 +1,28 @@
+<?php
+/** @var array $auctions */
+    $auctions;
+?>
+<h2>Auctions</h2>
+<table border="1">
+    <tr>
+        <th>Code</th>
+        <th>Lot Name</th>
+        <th>Start Date</th>
+        <th>Finish Date</th>
+        <th>Start Price</th>
+        <th>Final Price</th>
+    </tr>
+    <?php foreach ($auctions as $auction):?> 
+    <tr>
+        <td><?php echo $auction['code']; ?></td>
+        <td><?php echo $auction['lotName']; ?></td>
+        <td><?php echo $auction['startDate']; ?></td>
+        <td><?php echo $auction['finishDate']; ?></td>
+        <td><?php echo $auction['startPrice']; ?></td>
+        <td><?php echo $auction['finalPrice']; ?></td>
+    </tr>
+    
+    <?php endforeach; ?>
+
+
+</table>
